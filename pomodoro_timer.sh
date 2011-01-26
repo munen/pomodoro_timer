@@ -1,8 +1,8 @@
 #!/bin/bash
 
 LOGFILE=pomodoro_backlog.asc
-POMODORO_TIME=25
-BREAK_TIME=5
+POMODORO_TIME=5
+BREAK_TIME=1
 
 clear
 echo "What is your activity for this pomodoro? "
@@ -14,19 +14,14 @@ function timer {
   counter=$limit
   echo = $2 =; echo
   echo "$counter minutes left...";
-  sleep 60
+  sleep 1
   let "counter = $counter - 1"
 
   while [ $counter != 0 ]; do
     timer $counter "$2"
   done
 
-  if [ $counter = $limit ]; then
-     echo
-     echo "Time's up - $counter minutes have elapsed!"
-     echo -e '\a' >&2
-     exit 0
-  fi
+  echo "Time's up!"
 }
 
 echo "Starting 25min pomodoro"
