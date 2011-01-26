@@ -20,12 +20,18 @@ function timer {
   while [ $counter != 0 ]; do
     timer $counter "$2"
   done
-
-  echo "Time's up!"
 }
 
 echo "Starting 25min pomodoro"
 timer $POMODORO_TIME "$activity"
+
+clear
+echo "======================="
+echo "~        BREAK        ~"
+echo "======================="
+echo; echo "Press [Enter] to continue"
+read
+
 echo "Starting 5min break"
 timer $BREAK_TIME Break
 
