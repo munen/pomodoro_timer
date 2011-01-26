@@ -1,7 +1,7 @@
 About
 -----
 
-pomodoro_timer is a small Bash script implementing the [Pomodoro Technique](http://www.pomodorotechnique.com/)
+pomodoro_timer is a small Bash script implementing the [Pomodoro Technique](http://www.pomodorotechnique.com/).
 
 [Screenshot - running](http://dispatched.ch/pic/pomodoro_demo1.png)
 
