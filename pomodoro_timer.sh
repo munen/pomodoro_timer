@@ -8,6 +8,7 @@ clear
 echo "What is your activity for this pomodoro? "
 read activity
 
+# Recursive helper function showing current Action and time left
 function timer {
   clear
   let "limit = $1"
@@ -22,7 +23,7 @@ function timer {
   done
 }
 
-echo "Starting 25min pomodoro"
+# Start Pomodoro
 timer $POMODORO_TIME "$activity"
 
 clear
@@ -32,11 +33,13 @@ echo "======================="
 echo; echo "Press [Enter] to continue"
 read
 
-echo "Starting 5min break"
 timer $BREAK_TIME Break
+echo; echo "Time's up!"
 
+# User feedback
 echo; echo -n "You have completed one pomodoro on: "
-echo "$activity"
+echo "'$activity'"
 
+# Logging
 echo `date` "; $activity" >> $LOGFILE
 echo; echo "Your pomodoro has been logged into:" $LOGFILE; echo
