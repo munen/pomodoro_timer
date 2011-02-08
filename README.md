@@ -12,8 +12,11 @@ Usage
 Start pomodoro_timer.sh, enter your activity and off you go.
 
 Inside the script you can configure:
+
  * Time for one Pomodoro (default 25min)
+
  * Break time (default 5min)
+
  * Logfile
 
 Dependencies
